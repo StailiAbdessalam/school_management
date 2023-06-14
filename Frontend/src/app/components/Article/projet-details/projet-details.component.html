@@ -1,0 +1,104 @@
+<app-sidebar></app-sidebar>
+
+<div class="titre">
+  <h2 class="titreProjet"><i class="img_icon fa-solid fa-gear"></i> {{ DetailsProjet.nom }} </h2>
+  <i *ngIf="TokenDecode?.role === 'Etudiant'" class="fa-solid fa-heart favoris" (click)="favoris(DetailsProjet._id)"></i>
+
+  <a routerLink="/Projet/modifier/{{DetailsProjet._id}}"><i *ngIf="TokenDecode?.role === 'Enseignant'" class="fa-sharp fa-solid fa-pen-to-square favoris"></i></a>
+</div>
+
+<div class="EmplacementArticel">
+  <p class="desc">
+    <i class="fa-solid fa-circle-info fa-xl" style="margin-right: 10px;"></i>
+    <strong>Description</strong><br> {{ DetailsProjet.description }}
+  </p>
+  <div class="prerequis">
+    <p>
+      <i class="fa-solid fa-circle-info fa-xl" style="margin-right: 10px;"></i><strong>Prérequis</strong><br>
+    </p>
+    <ul *ngFor="let prerequis of DetailsProjet.prerequis">
+      <li>{{ prerequis }}</li>
+    </ul>
+  </div>
+
+  <div class="competence">
+    <ul *ngIf="TokenDecode?.role === 'Etudiant'">
+      <span style="display: flex;"><i style="position: relative; color:black;" class="fa-solid fa-user-tie fa-xl"></i> <h4>Votre progression :</h4></span>
+
+      <li *ngFor="let competence of competencesProjet; let i = index">
+        <div class="ligne">
+          <span class="nom" style="color: black"><strong>{{ competence.nom }}</strong></span>
+          <div class="range">
+            <input type="range" min="0" max="100" id="range2"
+              [value]="competence.progression" [step]="5"
+              (input)="ChangerProgression($event, competence, DetailsProjet._id)"
+              [(ngModel)]="competence.progression"
+              [disabled]="i > 0 && competencesProjet[i - 1]?.progression !== 100" />
+            <div class="value2">{{ competence.progression }}%</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+
+    <ul *ngIf="TokenDecode?.role === 'Enseignant'">
+
+      <li *ngFor="let competence of DetailsProjet.competences; let i = index">
+        <div class="ligne">
+          <span class="nom" style="color: black"><strong>{{ competence }}</strong></span>
+        </div>
+      </li>
+    </ul>
+
+    <div class="totalStat" style="display: flex;">
+
+
+<!-- **************************************Stat 1**************************************** -->
+    <div class="skill">
+      <div class="outer">
+        <div class="inner">
+          <div id="number">
+            <p id="myParagraph"></p>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+        <defs>
+           <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="#e91e63" />
+              <stop offset="100%" stop-color="#673ab7" />
+           </linearGradient>
+        </defs>
+        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+
+</svg>
+
+
+<!-- **************************************Stat 2**************************************** -->
+
+
+<div class="skill2">
+  <div class="outer">
+    <div class="inner">
+      <div id="number">
+        <p id="myParagraph"></p>
+      </div>
+    </div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+    <defs>
+       <linearGradient id="GradientColor">
+          <stop offset="0%" stop-color="#e91e63" />
+          <stop offset="100%" stop-color="#673ab7" />
+       </linearGradient>
+    </defs>
+    <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+
+</svg>
+
+    </div>
+  </div>
+</div>
+
+</div>
+</div>

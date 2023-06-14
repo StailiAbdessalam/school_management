@@ -1,0 +1,54 @@
+<app-sidebar></app-sidebar>
+
+<div class="titre">
+  <h2><i class="fa-solid fa-user fa-xl"></i> Profile :</h2>
+</div>
+
+<div class="EmplacementArticel">
+  <form class="Forms" [formGroup]="UpdateProfile" (ngSubmit)="confirmerModification()">
+    <div class="number1">
+      <div>
+        <label for="nom">Nom :</label>
+        <input class="nom" type="text" [value]="UserData.nom" disabled style="background-color: rgb(243, 241, 241);">
+      </div>
+
+      <div>
+        <label for="prenom">Prenom :</label>
+        <input class="prenom" type="text" [value]="UserData.prenom" disabled style="background-color: rgb(243, 241, 241);">
+      </div>
+    </div>
+
+    <div class="number2">
+      <div>
+        <label for="email">Adresse email :</label>
+        <input class="email" type="text" [value]="UserData.email" formControlName="email">
+        <div *ngIf="UpdateProfile.controls['email'].invalid && UpdateProfile.controls['email'].touched">
+          <span class="text-danger">Adresse email n'est pas dans le bon format </span>
+        </div>
+      </div>
+      <div>
+        <label for="adresse">Adresse :</label>
+        <input class="adresse" type="text" [value]="UserData.adresse" formControlName="adresse">
+      </div>
+    </div>
+
+    <div class="number3">
+      <div>
+        <label for="ville">Ville :</label>
+        <input class="ville" type="text" [value]="UserData.ville" formControlName="ville">
+      </div>
+      <div>
+        <label for="sexe">Sexe :</label>
+        <input class="sexe" type="text" [value]="UserData.sexe ? 'homme' : 'femme'" disabled
+          style="background-color: rgb(243, 241, 241);">
+      </div>
+    </div>
+
+    <div class="number4">
+      <label for="phone">Numéro de Téléphone :</label>
+      <input class="phone" type="number" [value]="'0' + UserData.telephone" formControlName="telephone">
+    </div>
+
+    <button class="Changer">Enregistrer</button>
+  </form>
+</div>

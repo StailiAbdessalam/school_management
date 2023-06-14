@@ -1,0 +1,143 @@
+.EmplacementArticel
+{
+  top: 40%;
+  position: absolute;
+
+}
+h2{
+  width: 15%;
+}
+
+.Forms{
+  margin-top: -5%;
+  position: relative;
+}
+.EmplacementArticel label{
+  color: black;
+  margin-right: 20px;
+}
+
+.EmplacementArticel input{
+  position: relative;
+  border-radius: 15px;
+  border-style: none;
+  border: solid 0.5px rgb(86, 50, 204);
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
+  font-size: 15px;
+}
+.number1
+{
+  position: relative;
+  display: flex;
+  left: 13.5%;
+  width: 86.5%;
+}
+
+.number1 div{
+  position: relative;
+  margin-left: 10%;
+}
+.number1 input{
+  width: 90%;
+}
+
+.number2
+{
+  position: relative;
+  display: block;
+  left: 22%;
+  width: 42%;
+
+}
+
+.number2 div{
+  position: relative;
+  margin-top: 2%;
+}
+.number2 input{
+  width: 100%;
+}
+
+.number3
+{
+  position: relative;
+  display: flex;
+  left: 13.5%;
+  width: 86.5%;
+
+}
+
+.number3 div{
+  position: relative;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.number3 input{
+  width: 90%;
+}
+.number4
+{
+  position: relative;
+  left: 22%;
+  width: 30%;
+  margin-top: 2%;
+}
+.number4 input{
+  position: relative;
+  width: 90%;
+}
+.Changer{
+  position: relative;
+  border-style: none;
+  background-color: rgb(86, 50, 204);
+  color: white;
+  border-radius: 15px;
+  padding: 0.5%;
+  left: 55%;
+}
+.ModiferEmail{
+  position: absolute;
+  left: 101%;
+  top: 20%;
+  border-style: none;
+  color: white;
+  background-color: rgb(86, 50, 204);
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.ModiferAdresse
+{
+  position: absolute;
+  left: 101%;
+  top: 76%;
+  border-style: none;
+  color: white;
+  background-color: rgb(86, 50, 204);
+  border-radius: 10px;
+  font-size: 18px;
+}
+.ModiferVille
+{
+  position: absolute;
+  top: 62%;
+  left: 28%;
+  border-style: none;
+  color: white;
+  background-color: rgb(86, 50, 204);
+  border-radius: 10px;
+  font-size: 18px;
+}
+.ModiferPhone
+{
+  position: absolute;
+  top: 83%;
+  left: 49.7%;
+  border-style: none;
+  color: white;
+  background-color: rgb(86, 50, 204);
+  border-radius: 10px;
+  font-size: 18px;
+}

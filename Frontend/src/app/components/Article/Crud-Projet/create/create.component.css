@@ -1,0 +1,206 @@
+.nom
+{
+  margin-bottom: 3%;
+}
+
+.nom input
+{
+  width: 50%;
+  padding-left: 1%;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 19px;
+  outline: none;
+  background-color: #f5f5f5;
+  margin-left: 15%;
+  position: relative;
+  height: 50px;
+  border: solid 1px blueviolet;
+}
+.nom label{
+  position: relative;
+  font-size: 19px;
+  left: 10%;
+}
+
+.prerequis
+{
+  margin-bottom: 3%;
+}
+
+.prerequis input
+{
+  width: 50%;
+  padding-left: 1%;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 19px;
+  outline: none;
+  background-color: #f5f5f5;
+  margin-left: 15.7%;
+  position: relative;
+  height: 50px;
+  border: solid 1px blueviolet;
+}
+.prerequis label{
+  position: relative;
+  font-size: 19px;
+  left: 10%;
+}
+.btnPrerequis
+{
+  position: relative;
+  left: 3%;
+  border-radius: 100%;
+  outline: none;
+  border-style: none;
+  color: white;
+  background-color: blueviolet;
+}
+
+
+
+.competence
+{
+  margin-bottom: 3%;
+}
+
+.competence input
+{
+  width: 50%;
+  padding-left: 1%;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 19px;
+  outline: none;
+  background-color: #f5f5f5;
+  margin-left: 13.8%;
+  position: relative;
+  height: 50px;
+  border: solid 1px blueviolet;
+}
+.competence label{
+  position: relative;
+  font-size: 19px;
+  left: 10%;
+}
+.btncompetence
+{
+  position: relative;
+  left: 3%;
+  border-radius: 15px;
+  outline: none;
+  border-style: none;
+  color: white;
+  background-color: blueviolet;
+}
+
+
+.description
+{
+  margin-bottom: 3%;
+}
+
+.description textarea
+{
+  width: 50%;
+  padding-left: 1%;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 19px;
+  outline: none;
+  background-color: #f5f5f5;
+  margin-left: 12.5%;
+  position: relative;
+  height: 300px;
+  border: solid 1px blueviolet;
+  min-height: 300px;
+}
+.description label{
+  position: relative;
+  font-size: 19px;
+  left: 10%;
+  top: -270px;
+}
+label {
+  color: black;
+}
+
+
+.Save{
+  left: 85%;
+  position: absolute;
+  width: 10%;
+  outline: none;
+  border-style: none;
+  background-color: green;
+  color: white;
+  border-radius: 15px;
+  font-size: 19px;
+
+}
+#prerequisgenere{
+  position: relative;
+
+}
+
+
+.competenceTab button{
+
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(86, 50, 204);
+  color: white;
+}
+.competenceTab{
+  position: relative;
+  left: 25%;
+  left: 23%;
+  width: 50%;
+}
+
+.competenceTab i{
+
+  margin-left: 15px;
+  color: red;
+  display: flex;
+  position: relative;
+}
+
+
+.prerequisTab button{
+
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  padding: 3px;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(86, 50, 204);
+  color: white;
+}
+.prerequisTab{
+  position: relative;
+  left: 23%;
+  width: 50%;
+}
+
+.prerequisTab i{
+
+  margin-left: 15px;
+  color: red;
+  display: flex;
+  position: relative;
+}

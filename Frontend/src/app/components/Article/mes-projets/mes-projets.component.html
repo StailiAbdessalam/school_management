@@ -1,0 +1,114 @@
+<app-sidebar></app-sidebar>
+<div class="EmplacementArticel">
+
+  <!-- **********************************************************Etudiant******************************************************  -->
+  <div class="row" *ngIf="TokenDecode?.role === 'Etudiant'">
+    <div class="card" *ngFor="let projetInscrit of UserPro.projetInscrit">
+      <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"> <strong>{{ projetInscrit.projet.nom }}</strong></h5>
+        <a routerLink="/ProjetDetails/{{ projetInscrit.projet._id }}"><button class="btn">Plus d'informations</button></a>
+      </div>
+    </div>
+  </div>
+  <!-- **********************************************************Enseignant*****************************************************  -->
+  <div class="row rolee" *ngIf="TokenDecode?.role === 'Enseignant'">
+    <div class="crudProjet">
+      <a routerLink="/MesProjet/Projet/Create">
+        <button class="create"> Créer un projet </button>
+      </a>
+    </div>
+
+    <div class="card" *ngFor="let item of UserPro">
+      <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"> <strong>{{ item.nom }}</strong></h5>
+
+        <a routerLink="/ProjetDetails/{{ item._id }}"><button class="btn">Plus d'informations</button></a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="row" *ngIf="TokenDecode?.role === 'Administrateur'">
+    <form class="Inscription" [formGroup]="CreerProfile" (ngSubmit)="Creation()">
+      <div class="choix">
+        <label>Indiquez le rôle de l'utilisateur</label>
+        <button [class.active]="etudiantSelected" (click)="selectEtudiant()">Etudiant</button>
+        <button [class.active]="enseignantSelected" (click)="selectEnseignant()">Enseignant</button>
+      </div>
+
+      <div>
+        <label for="nom">Indiquez le nom de l'utilisateur</label>
+        <input type="text" name="nom" id="nom" placeholder="Veuillez taper le nom" formControlName="nom">
+        <div *ngIf="CreerProfile.controls['nom'].invalid && CreerProfile.controls['nom'].touched">
+          <span class="text-danger">Le champs de nom est obligatoire !</span>
+        </div>
+      </div>
+
+      <div>
+        <label for="prenom">Indiquez le prénom de l'utilisateur</label>
+        <input type="text" name="prenom" id="prenom" placeholder="Veuillez taper le prénom" formControlName="prenom">
+        <div *ngIf="CreerProfile.controls['prenom'].invalid && CreerProfile.controls['prenom'].touched">
+          <span class="text-danger">Le champs de prenom est obligatoire ! </span>
+        </div>
+      </div>
+
+      <div>
+        <label for="adresse">Indiquez l'adresse de l'utilisateur</label>
+        <input type="text" name="adresse" id="adresse" placeholder="Veuillez taper l'adresse" formControlName="adresse">
+        <div *ngIf="CreerProfile.controls['adresse'].invalid && CreerProfile.controls['adresse'].touched">
+          <span class="text-danger">Le champs de l'adresse est obligatoire ! </span>
+        </div>
+      </div>
+
+      <div>
+        <label for="email">Adresse email :</label>
+        <input class="email" type="text"  formControlName="email">
+        <div *ngIf="CreerProfile.controls['email'].invalid && CreerProfile.controls['email'].touched">
+          <span class="text-danger">Adresse email n'est pas dans le bon format </span>
+
+        </div>
+      </div>
+
+      <div>
+        <label for="dateDeNaissance">Indiquez la date de naissance de l'utilisateur</label>
+        <input type="date" name="dateDeNaissance" id="dateDeNaissance" placeholder="Veuillez taper la date de naissance" formControlName="dateDeNaissance">
+        <div *ngIf="CreerProfile.controls['dateDeNaissance'].invalid && CreerProfile.controls['dateDeNaissance'].touched">
+          <span class="text-danger">Le champs de la date de naissance est obligatoire !</span>
+        </div>
+      </div>
+
+      <div>
+        <label for="ville">Indiquez la ville de l'utilisateur</label>
+        <input type="text" name="ville" id="ville" placeholder="Veuillez taper la ville" formControlName="ville">
+        <div *ngIf="CreerProfile.controls['ville'].invalid && CreerProfile.controls['ville'].touched">
+          <span class="text-danger">Le champs de ville est obligatoire !</span>
+        </div>
+      </div>
+
+      <div>
+        <label for="telephone">Indiquez le numéro de téléphone de l'utilisateur</label>
+        <input type="text" name="telephone" id="telephone" placeholder="Veuillez taper le numéro de téléphone" formControlName="telephone">
+        <div *ngIf="CreerProfile.controls['telephone'].invalid && CreerProfile.controls['telephone'].touched">
+          <span class="text-danger">Le champs de telephone est obligatoire !</span>
+        </div>
+      </div>
+
+      <div>
+        <label for="sexe">Indiquez le sexe de l'utilisateur</label>
+        <select type="text" name="sexe" id="sexe" placeholder="Veuillez taper le sexe" formControlName="sexe">
+          <option [value]="true">Homme</option>
+          <option [value]="false">Femme</option>
+        </select>
+        <div *ngIf="CreerProfile.controls['sexe'].invalid && CreerProfile.controls['sexe'].touched">
+          <span class="text-danger">Le champs de sexe est obligatoire !</span>
+        </div>
+      </div>
+
+      <button>Créer le compte</button>
+    </form>
+
+   </div>
+</div>

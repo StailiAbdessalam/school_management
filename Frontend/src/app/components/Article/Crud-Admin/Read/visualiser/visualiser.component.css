@@ -1,0 +1,80 @@
+form{
+  top: 100px;
+  position: relative;
+}
+label
+{
+  color: black;
+}
+img
+{
+  position: relative;
+  top: -150px;
+  left: 39%;
+  width: 200px;
+  height: 200px;
+}
+.bloc1 div
+{
+  position: relative;
+  display: flex;
+  left: 7%;
+  top: 12%;
+}
+.bloc1 p{
+  color: rgb(136, 136, 136);
+  margin-left: 20px;
+}
+
+.bloc1{
+  border: solid 1px black;
+  position: relative;
+  top: -70px;
+  left: 10%;
+  font-weight: bold;
+  width: 30%;
+  height: 240px;
+}
+
+.bloc2{
+
+  border: solid 1px black;
+  position: relative;
+  top: -308px;
+  left: 50%;
+  font-weight: bold;
+  width: 30%;
+  height: 240px;
+}
+
+.bloc2 div
+{
+  position: relative;
+  display: flex;
+  left: 7%;
+  top: 12%;
+}
+
+.bloc2 p{
+  color: rgb(136, 136, 136);
+  margin-left: 20px;
+}
+.back{
+  position: relative;
+  left: 10%;
+  background-color: rgb(86, 50, 204);
+  color: white;
+  padding: 8px;
+  border-radius: 50px;
+  top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.titre{
+  color: black;
+  font-size: 20px;
+  top: 180px;
+  position: relative;
+  left: 12%;
+  width: 30%;
+}

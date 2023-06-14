@@ -1,0 +1,33 @@
+<div class="side_bar">
+  <img src="../../../../assets/IMG/profile 1.jpg" class="profile_image">
+  <h5>{{this.TokenDecode?.nom}}  {{this.TokenDecode?.prenom}}</h5>
+  <a routerLink="/home" routerLinkActive="active">
+    <i class="img_icon fa-solid fa-house-user fa-xl"></i>
+    <span>Accueil</span>
+  </a>
+  <a routerLink="/Profile" routerLinkActive="active">
+    <i class="img_icon fa-solid fa-user fa-xl"></i>
+    <span>Profil</span>
+  </a>
+  <a routerLink="/MesProjet" routerLinkActive="active" *ngIf="TokenDecode?.role === 'Etudiant'">
+    <i class="img_icon fa-sharp fa-solid fa-folder-open fa-xl"></i>
+    <span>Mes Projet</span>
+  </a>
+
+  <a routerLink="/MesProjet" routerLinkActive="active" *ngIf="TokenDecode?.role === 'Enseignant'">
+    <i class="img_icon fa-sharp fa-solid fa-folder-open fa-xl"></i>
+    <span>Projet</span>
+  </a>
+
+  <a routerLink="/MesProjet" routerLinkActive="active" *ngIf="TokenDecode?.role === 'Administrateur'">
+    <i class="img_icon fa-solid fa-people-roof fa-xl"></i>
+    <span>Utiliateurs</span>
+  </a>
+  <a routerLink="/parametre" routerLinkActive="active">
+    <i class="img_icon fa-solid fa-gear fa-xl"></i>
+    <span>Paramètres</span>
+  </a>
+  <app-logout></app-logout>
+</div>
+
+<app-header></app-header>

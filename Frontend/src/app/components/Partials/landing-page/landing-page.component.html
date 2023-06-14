@@ -1,0 +1,69 @@
+<div class="hero vh-100 d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Bienvenue</h1>
+        <br>
+        <h1 class="display-6">Veuillez vous connecter pour accéder </h1>
+        <p class="text text-secondary m-2 mt-4"> Ce site permet aux étudiants de s'auto-évaluer par
+          compétence sur des projets créés par des enseignants. Si vous n'avez pas
+          de compte, veuillez contacter l'administrateur à l'adresse mail suivante : "Support@gmail.com"</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="d-flex align-items-center" style="margin-right: 100px;">
+    <div class="d-flex">
+      <div class="form-wrapper is-active">
+        <button type="button" class="switcher switcher-login" (click)="switcher()">Login <span class="underline"></span></button>
+        <form class="form form-login" [formGroup]="Login" (ngSubmit)="login()">
+          <div class="input-block">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" type="email" formControlName="email">
+            <div *ngIf="Login.controls['email'].invalid && (Login.controls['email'].dirty || Login.controls['email'].touched)">
+              <div *ngIf="Login.controls['email'].errors?.['required']">
+                <span class="text-danger">Ce champ est requis</span>
+              </div>
+              <div *ngIf="Login.controls['email'].errors?.['email']">
+                <span class="text-danger">Ce n'est pas un email valide</span>
+              </div>
+            </div>
+          </div>
+          <div class="input-block">
+            <label for="login-password">Password</label>
+            <input id="login-password" type="password" formControlName="password">
+            <div *ngIf="Login.controls['password'].invalid && (Login.controls['password'].dirty || Login.controls['password'].touched)">
+              <div *ngIf="Login.controls['password'].errors?.['required']">
+                <span class="text-danger">Ce champ est obligatoire</span>
+              </div>
+            </div>
+          </div>
+          <div class="Etudiant">
+            <input type="radio" id="Etudiant" value="Etudiant" [(ngModel)]="Etudiant" [ngModelOptions]="{standalone: true}">
+            <label for="Etudiant" style="margin-left: 20px;">Étudiant</label>
+          </div>
+          <div class="Enseignant">
+            <input type="radio" id="Enseignant" value="Enseignant" [(ngModel)]="Enseignant" [ngModelOptions]="{standalone: true}">
+            <label for="Enseignant" style="margin-left: 20px;">Enseignant</label>
+          </div>
+          <div class="Administrateur">
+            <input type="radio" id="Administrateur" value="Administrateur" [(ngModel)]="Administrateur" [ngModelOptions]="{standalone: true}">
+            <label for="Administrateur" style="margin-left: 20px;">Administrateur</label>
+          </div>
+          <button type="submit" class="btn btn-success text text-white">Login</button>
+        </form>
+      </div>
+
+      <div class="form-wrapper">
+        <button type="button" class="switcher switcher-signup" (click)="switcher()">Mot de passe oublié <span class="underline"></span></button>
+        <form class="form form-signup">
+          <div class="input-block">
+            <label for="signup-email">Adresse email</label>
+            <input id="signup-email" type="email" required>
+          </div>
+          <button type="submit" class="btn btn-success text text-white">Confirmer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,49 @@
+<app-sidebar></app-sidebar>
+
+<div class="EmplacementArticel">
+  <a class="back" routerLink="/home"><i class="fa-solid fa-arrow-left fa-xl"></i></a>
+  <p class="titre"><strong>Information de l'{{role}} :</strong></p>
+  <img src="../../../../assets/IMG/profile 1.jpg" class="profile_image">
+  <form>
+    <div class="bloc1">
+      <div>
+        <label>Nom :</label>
+        <span><p style="text-transform: uppercase;">{{infouser.nom}}</p></span>
+      </div>
+
+      <div>
+        <label>Prénom :</label>
+        <span><p style="text-transform: uppercase;">{{infouser.prenom}}</p></span>
+      </div>
+
+      <div>
+        <label>Email :</label>
+        <span><p>{{infouser.email}}</p></span>
+      </div>
+    </div>
+
+    <div class="bloc2">
+
+      <div>
+        <label>Date de naissance :</label>
+        <span><p >{{ infouser.dateDeNaissance | date: 'dd/MM/yyyy' }}</p></span>
+      </div>
+
+      <div>
+        <label>ville :</label>
+        <span><p style="text-transform: uppercase;">{{infouser.ville}}</p></span>
+      </div>
+
+      <div>
+        <label>Numéro de téléphone :</label>
+        <span><p>0{{infouser.telephone}}</p></span>
+      </div>
+
+      <div>
+        <label>Projet Inscrit :</label>
+        <span><p>0{{infouser.telephone}}</p></span>
+      </div>
+  </div>
+  </form>
+
+</div>

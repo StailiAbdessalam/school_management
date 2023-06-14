@@ -1,0 +1,39 @@
+<app-sidebar></app-sidebar>
+<div class="EmplacementArticel">
+
+
+  <div class="nom">
+    <label for="NomPRojet"> Nom du projet :</label>
+    <input type="text" id="nom" value="" placeholder="Choisir un nom pour votre Projet ! :)" [(ngModel)]="nomProjet">
+  </div>
+
+  <!-- // je dois rajouter un script pour que chaque fois il clique sur le boutton ajouter il ajoute ce input -->
+
+
+  <div class="prerequis">
+    <label for="prerequis"> Les prérequis :</label>
+    <input type="text" name="prerequis" id="prerequis" placeholder="Ajouter une prerequis" >
+    <button class="btnPrerequis" (click)="ajouterPrerequis()"><i class="fa-solid fa-plus fa-xl"></i></button>
+    <div class="prerequisTab" *ngFor="let item of tabPrerequis  let i = index;">
+      <button (click)="supprimerPrerequis(i)" >{{item}} <i class="fa-sharp fa-solid fa-trash"></i></button>
+    </div >
+  </div>
+<!-- // je dois rajouter un script pour que chaque fois il clique sur le boutton ajouter il ajoute ce input -->
+
+
+<div class="competence">
+  <label for="nomCompetences">Les compétences :</label>
+  <input type="text" name="nomCompetences" id="nomCompetences" placeholder="Ajouter une compétence">
+  <button class="btncompetence" (click)="ajouterCompetence()"><i class="fa-solid fa-plus fa-xl"></i></button>
+  <div class="competenceTab" *ngFor="let item of tabCompetences; let i = index;">
+    <button (click)="supprimerCompetence(i)">{{item}} <i class="fa-sharp fa-solid fa-trash"></i></button>
+  </div>
+</div>
+
+  <div class="description">
+    <label for="description">Description du projet</label>
+    <textarea name="description" id="description" rows="4" placeholder="Description du projet" [(ngModel)]="descriptionProjet"></textarea>
+  </div>
+
+  <button class="Save" (click)="enregistrerProjet()">Enregistrer</button>
+</div>

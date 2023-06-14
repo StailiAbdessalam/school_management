@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #0d6efd;
+  --dark: #21252f;
+  --body: #f5f5ef;
+  --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+body {
+  /* font-family: Sora, "sans-serif"; */
+  line-height: 1.7;
+  color: var(--body);
+}
+
+.EmplacementArticel
+{
+    top: 250px;
+    position: relative;
+    width: 102rem;
+    margin-left: 16.5rem;
+}
+.titre h2{
+  position: absolute;
+  left: 30rem;
+  top: 12rem;
+  color: black;
+  font-size: 2rem;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

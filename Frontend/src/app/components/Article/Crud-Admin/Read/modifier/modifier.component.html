@@ -1,0 +1,81 @@
+<app-sidebar></app-sidebar>
+
+<div class="EmplacementArticel">
+  <form [formGroup]="UpdateProfileUser" (ngSubmit)="UpdateUser()">
+    <div>
+      <label>Nom :</label>
+      <input type="text"  formControlName="nom" >
+    </div>
+
+    <div>
+      <label>Prénom :</label>
+      <input type="text" formControlName="prenom">
+    </div>
+
+    <div>
+      <label for="email">Adresse email :</label>
+      <input class="email" type="text" formControlName="email">
+      <div *ngIf="UpdateProfileUser.controls['email'].invalid && UpdateProfileUser.controls['email'].touched">
+        <span class="text-danger">Adresse email n'est pas dans le bon format </span>
+      </div>
+    </div>
+
+    <div>
+      <label>Numéro de téléphone :</label>
+      <input type="number" formControlName="telephone">
+    </div>
+
+    <div>
+      <label>Adresse :</label>
+      <input type="text" formControlName="adresse">
+    </div>
+
+    <div>
+      <label>Ville :</label>
+      <input type="text" formControlName="ville">
+    </div>
+
+    <div>
+      <label>Date de naissance :</label>
+      <input type="date" formControlName="dateDeNaissance">
+    </div>
+    <button class="button">Enregistrer</button>
+  </form>
+
+  <div>
+    <div>
+      <label>Nom :</label>
+      <p>{{UserData.nom}}</p>
+    </div>
+
+    <div>
+      <label>Prénom :</label>
+      <p>{{UserData.prenom}}</p>
+    </div>
+
+    <div>
+      <label>Adresse email :</label>
+      <p>{{UserData.email}}</p>
+    </div>
+
+    <div>
+      <label>Numéro de téléphone :</label>
+      <p>{{UserData.telephone}}</p>
+    </div>
+
+    <div>
+      <label>Adresse :</label>
+      <p>{{UserData.adresse}}</p>
+    </div>
+
+    <div>
+      <label>Ville :</label>
+      <p>{{UserData.ville}}</p>
+    </div>
+
+    <div>
+      <label>Date de naissance :</label>
+      <p>{{UserData.dateDeNaissance | date: "dd/MM/YYYY" }} </p>
+    </div>
+  </div>
+</div>
