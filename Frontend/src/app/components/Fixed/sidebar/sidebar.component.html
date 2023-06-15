@@ -1,14 +1,17 @@
-<div class="side_bar">
+<div class="side_bar" style="display: none;">
   <img src="../../../../assets/IMG/profile 1.jpg" class="profile_image">
   <h5>{{this.TokenDecode?.nom}}  {{this.TokenDecode?.prenom}}</h5>
+
   <a routerLink="/home" routerLinkActive="active">
     <i class="img_icon fa-solid fa-house-user fa-xl"></i>
     <span>Accueil</span>
   </a>
+
   <a routerLink="/Profile" routerLinkActive="active">
     <i class="img_icon fa-solid fa-user fa-xl"></i>
     <span>Profil</span>
   </a>
+
   <a routerLink="/MesProjet" routerLinkActive="active" *ngIf="TokenDecode?.role === 'Etudiant'">
     <i class="img_icon fa-sharp fa-solid fa-folder-open fa-xl"></i>
     <span>Mes Projet</span>
@@ -23,11 +26,36 @@
     <i class="img_icon fa-solid fa-people-roof fa-xl"></i>
     <span>Utiliateurs</span>
   </a>
+
   <a routerLink="/parametre" routerLinkActive="active">
     <i class="img_icon fa-solid fa-gear fa-xl"></i>
     <span>Paramètres</span>
   </a>
+
   <app-logout></app-logout>
 </div>
 
 <app-header></app-header>
+
+
+
+
+
+<nav class="menu" tabindex="0">
+	<div class="smartphone-menu-trigger"></div>
+  <header class="avatar">
+		<img src="../../../../assets/IMG/profile 1.jpg" />
+    <h2>{{this.TokenDecode?.nom}} {{this.TokenDecode?.prenom}}</h2>
+  </header>
+	<ul>
+    <li routerLink="/home" routerLinkActive="active" tabindex="0" class="icon-dashboard"><span>Accueil</span></li>
+    <li  routerLink="/Profile" routerLinkActive="active" tabindex="0" class="icon-customers"><span>Profile</span></li>
+    <li  routerLink="/MesProjet" routerLinkActive="active" *ngIf="TokenDecode?.role === 'Etudiant'" tabindex="0" class="icon-folder"><span>Mes Projets</span></li>
+    <li  routerLink="/MesProjet" routerLinkActive="active" *ngIf="TokenDecode?.role === 'Enseignant'" tabindex="0" class="icon-folder"><span>Projet</span></li>
+    <li  routerLink="/MesProjet" routerLinkActive="active" *ngIf="TokenDecode?.role === 'Administrateur'" tabindex="0" class="icon-add-users"><span>Utiliateurs</span></li>
+    <li  routerLink="/parametre" routerLinkActive="active" tabindex="0" class="icon-settings"><span>Settings</span></li>
+    
+  </ul>
+  <app-logout></app-logout>
+
+</nav>

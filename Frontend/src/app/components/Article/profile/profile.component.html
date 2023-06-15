@@ -62,7 +62,8 @@
       </div>
     </nav> -->
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(https://raw.githubusercontent.com/creativetimofficial/argon-dashboard/gh-pages/assets-old/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+      style="min-height: 600px; background-image: url(https://raw.githubusercontent.com/creativetimofficial/argon-dashboard/gh-pages/assets-old/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
@@ -70,7 +71,8 @@
         <div class="row">
           <div class="col-lg-7 col-md-10">
             <h1 class="display-2 text-white">Hello {{UserData.nom}}</h1>
-            <p class="text-white mt-0 mb-5">Ceci est votre page de profil. Vous pouvez voir l'avancement de votre travail et gérer vos projets ou tâches assignées</p>
+            <h4 class="text-white mt-0 mb-5">Ceci est votre page de profil. Vous pouvez voir l'avancement de votre
+              travail et gérer vos projets ou tâches assignées</h4>
             <div class="w-20"></div>
           </div>
         </div>
@@ -93,7 +95,7 @@
             <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
               <div class="d-flex justify-content-between">
                 <div class="btn btn-sm btn-info mr-4"></div>
-                <div class="btn btn-sm btn-default float-right">  </div>
+                <div class="btn btn-sm btn-default float-right"> </div>
               </div>
             </div>
             <div class="card-body pt-0 pt-md-4">
@@ -101,24 +103,25 @@
                 <div class="col">
                   <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                     <div>
-                      <span class="heading">22</span>
-                      <span class="description">Friends</span>
+                      <!-- <span class="heading">22</span> -->
+                      <!-- <span class="description">Friends</span> -->
                     </div>
                     <div>
-                      <span class="heading">10</span>
-                      <span class="description">Photos</span>
+                      <!-- <span class="heading">10</span>  -->
+                      <!-- <span class="description">Photos</span> -->
                     </div>
                     <div>
-                      <span class="heading">89</span>
-                      <span class="description">Comments</span>
+                      <!-- <span class="heading">89</span> -->
+                      <!-- <span class="description">Comments</span> -->
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="text-center"> 
-                <h3>
-                  {{UserData.nom}} {{UserData.prenom}}<span class="font-weight-light">, {{UserData.sexe ? "Homme": "femme"}}</span>
-                </h3>
+              <div class="text-center" style="margin-top: 20px;">
+                <h4>
+                  {{UserData.nom}} {{UserData.prenom}}<span class="font-weight-light">, {{UserData.sexe ? "Homme":
+                    "femme"}}</span>
+                </h4>
                 <div class="h5 font-weight-300">
                   <i class="ni location_pin mr-2"></i>
                   {{UserData.ville}}, {{UserData.adresse}}
@@ -127,11 +130,12 @@
                   <i class="ni business_briefcase-24 mr-2"></i>{{UserData.email}}
                 </div>
                 <div>
-                  <i class="ni education_hat mr-2"></i>{{UserData.telephone}}
+                  <i class="ni education_hat mr-2"></i>0{{UserData.telephone}}
                 </div>
                 <hr class="my-4">
-                <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
-               
+                <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records
+                  all of his own music.</p>
+
               </div>
             </div>
           </div>
@@ -141,37 +145,40 @@
             <div class="card-header bg-white border-0">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">Mon compte</h3>
+                  <h4 class="mb-0">Mon compte</h4>
                 </div>
                 <div class="col-4 text-right">
-                  <div  class="btn btn-sm btn-primary"></div>
+                  <div class="btn btn-sm btn-primary"></div>
                 </div>
               </div>
             </div>
             <div class="card-body">
-              <form  [formGroup]="UpdateProfile" (ngSubmit)="confirmerModification()">
+              <form [formGroup]="UpdateProfile" (ngSubmit)="confirmerModification()">
                 <h6 class="heading-small text-muted mb-4">User information</h6>
                 <div class="pl-lg-4">
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-username">Nom :</label>
-                        <input type="text" id="input-username"  [value]="UserData.nom" disabled class="form-control form-control-alternative" placeholder="Nom :" value="lucky.jesse">
+                        <input type="text" id="input-username" [value]="UserData.nom" disabled
+                          class="form-control form-control-alternative" placeholder="Nom :" value="lucky.jesse">
                       </div>
                     </div>
                     <div class="col-lg-6">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-username">Prenom :</label>
-                        <input type="text" id="input-username" [value]="UserData.prenom" disabled class="form-control form-control-alternative" placeholder="Prenom :" value="lucky.jesse">
+                        <input type="text" id="input-username" [value]="UserData.prenom" disabled
+                          class="form-control form-control-alternative" placeholder="Prenom :" value="lucky.jesse">
                       </div>
                     </div>
-                   
+
                   </div>
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="form-group">
                         <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" [value]="UserData.email" formControlName="email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                        <input type="email" id="input-email" [value]="UserData.email" formControlName="email"
+                          class="form-control form-control-alternative" placeholder="jesse@example.com">
                         <div *ngIf="UpdateProfile.controls['email'].invalid && UpdateProfile.controls['email'].touched">
                           <span class="text-danger">Adresse email n'est pas dans le bon format </span>
                         </div>
@@ -187,7 +194,8 @@
                     <div class="col-md-12">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-address">Address :</label>
-                        <input id="input-address" class="form-control form-control-alternative" [value]="UserData.adresse" formControlName="adresse" placeholder="Home Address" type="text">
+                        <input id="input-address" class="form-control form-control-alternative"
+                          [value]="UserData.adresse" formControlName="adresse" placeholder="Home Address" type="text">
                       </div>
                     </div>
                   </div>
@@ -195,19 +203,22 @@
                     <div class="col-lg-4">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-city">Ville :</label>
-                        <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" [value]="UserData.ville" formControlName="ville" >
+                        <input type="text" id="input-city" class="form-control form-control-alternative"
+                          placeholder="City" [value]="UserData.ville" formControlName="ville">
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group focused">
                         <label class="form-control-label" for="input-country">Sexe :</label>
-                        <input type="text" id="input-country" [value]="UserData.sexe ? 'homme' : 'femme'" disabled class="form-control form-control-alternative" placeholder="ville">
+                        <input type="text" id="input-country" [value]="UserData.sexe ? 'homme' : 'femme'" disabled
+                          class="form-control form-control-alternative" placeholder="ville">
                       </div>
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
                         <label class="form-control-label" for="input-country">Numéro de Téléphone :</label>
-                        <input type="number" id="input-postal-code" class="form-control form-control-alternative" [value]="'0' + UserData.telephone" formControlName="telephone" placeholder="Postal code">
+                        <input type="number" id="input-postal-code" class="form-control form-control-alternative"
+                          [value]="'0' + UserData.telephone" formControlName="telephone" placeholder="Postal code">
                       </div>
                     </div>
                   </div>
@@ -218,7 +229,8 @@
                 <div class="pl-lg-4">
                   <div class="form-group focused">
                     <label>About Me</label>
-                    <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                    <textarea rows="4" class="form-control form-control-alternative"
+                      placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
                   </div>
                 </div>
                 <button class="btn btn-info">Enregistrer</button>
@@ -229,7 +241,7 @@
       </div>
     </div>
   </div>
- 
+
 </div>
 
 <!-- <div class="profil">
