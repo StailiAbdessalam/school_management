@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
 h1,h2,h3,h4,h5,h6,
 .display-6
 {
@@ -28,16 +28,66 @@ a{
     background-color: rgba(255, 255, 255, 0.8);
     z-index: -1;
 }
-
-body{
-	margin: 0;
-	padding: 0;
+.main_page{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
+	
 }
+input{
+	outline: none;
+}
+.intial__form{
+	height: 400px;
+    
+}
+.form label{
+	color: #D6D5A8;
+	font-weight: 500;
+	
+}
+input[type ="radio"]{
+	accent-color: #51557E;
+}
+html{
+	font-size: 62.5%;
+}
+
+
+.main__container{
+	display: flex;
+	width: 70%;
+	
+}
+.description__container{
+	width: 40%;
+
+}
+.img__logo{
+	width: 60rem;
+	display: block;
+	transform: translateX(-140px);
+	-webkit-transform: translateX(-140px);
+	-moz-transform: translateX(-140px);
+	-ms-transform: translateX(-140px);
+	-o-transform: translateX(-140px);
+}
+
+.paragraph__description{
+	font-size: 1.7rem;
+	color:#816797;
+	width: 80%;
+	margin-left: 5rem;
+	text-align: left;
+	transform: translateY(-190px);
+	-webkit-transform: translateY(-190px);
+	-moz-transform: translateY(-190px);
+	-ms-transform: translateY(-190px);
+	-o-transform: translateY(-190px);
+	font-weight: 500;
+}
+
 .form-wrapper {
 	animation: hideLayer .3s ease-out forwards;
 }
@@ -139,23 +189,23 @@ body{
 }
 
 .form-login {
+	background-color:#51557E;
 	animation: hideLogin .3s ease-out forwards;
 }
 
 .form-wrapper.is-active .form-login {
 	animation: showLogin .3s ease-in forwards;
+	
 }
 
 @keyframes showLogin {
 	0% {
-		background:  rgb(86, 50, 204);
 		transform: translate(40%, 10px);
 	}
 	50% {
 		transform: translate(0, 0);
 	}
 	100% {
-		background-color: rgb(86, 50, 204);
 		transform: translate(35%, -20px);
 		border-radius: 20px;
 	}
@@ -163,7 +213,6 @@ body{
 
 @keyframes hideLogin {
 	0% {
-		background-color: rgb(86, 50, 204);
 		transform: translate(40%, -20px);
 	}
 	50% {
@@ -171,12 +220,12 @@ body{
 	}
 	100% {
 		transform: translate(40%, 10px);
-        background-color: rgb(86, 50, 204);
         filter: blur(5px);
 	}
 }
 
 .form-signup {
+	background-color: #51557E;
 	animation: hideSignup .5s ease-out forwards;
 }
 
@@ -186,14 +235,12 @@ body{
 
 @keyframes showSignup {
 	0% {
-		background: rgb(86, 50, 204);
 		transform: translate(-40%, 10px) scaleY(.8);
 	}
 	50% {
 		transform: translate(0, 0) scaleY(.8);
 	}
 	100% {
-		background-color: rgb(86, 50, 204);
 		transform: translate(-35%, -20px) scaleY(1);
 		border-radius: 20px;
 	}
@@ -201,7 +248,6 @@ body{
 
 @keyframes hideSignup {
 	0% {
-		background-color: rgb(86, 50, 204);
 		transform: translate(-35%, -20px) scaleY(1);
 	}
 	50% {
@@ -209,7 +255,6 @@ body{
 	}
 	100% {
 		transform: translate(-40%, 10px) scaleY(.8);
-        background-color: rgb(86, 50, 204);
         filter: blur(5px);
 	}
 }

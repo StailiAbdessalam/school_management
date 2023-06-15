@@ -1,14 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --primary: #0d6efd;
   --dark: #21252f;
   --body: #f5f5ef;
   --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
 }
+html{
+  font-size: 62.5%;
+}
 body {
   /* font-family: Sora, "sans-serif"; */
   line-height: 1.7;
   color: var(--body);
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;
+
 }
 
 .EmplacementArticel
