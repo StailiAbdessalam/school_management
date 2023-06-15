@@ -8,8 +8,6 @@ const checkAdmin = (req, res, next) => {
 
 
 
-// dbfhidhfiodsh
-
   if (token) {
     jwt.verify(token, "CLE_SECRET", async (err, decodedToken) => {
       if (err) {

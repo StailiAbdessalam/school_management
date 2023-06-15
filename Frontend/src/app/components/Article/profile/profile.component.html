@@ -1,54 +1,291 @@
-<app-sidebar></app-sidebar>
+<app-sidebar class="sidebar_profile"></app-sidebar>
 
-<div class="titre">
-  <h2><i class="fa-solid fa-user fa-xl"></i> Profile :</h2>
-</div>
-
-<div class="EmplacementArticel">
-  <form class="Forms" [formGroup]="UpdateProfile" (ngSubmit)="confirmerModification()">
-    <div class="number1">
-      <div>
-        <label for="nom">Nom :</label>
-        <input class="nom" type="text" [value]="UserData.nom" disabled style="background-color: rgb(243, 241, 241);">
+<div>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <!-- <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+      
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">User profile</a>
+       
+        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+          <div class="form-group mb-0">
+            <div class="input-group input-group-alternative">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+              </div>
+              <input class="form-control" placeholder="Search" type="text">
+            </div>
+          </div>
+        </form>
+       
+        <ul class="navbar-nav align-items-center d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <span class="avatar avatar-sm rounded-circle">
+                  <img alt="Image placeholder" src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg">
+                </span>
+                <div class="media-body ml-2 d-none d-lg-block">
+                  <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="../examples/profile.html" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>My profile</span>
+              </a>
+              <a href="../examples/profile.html" class="dropdown-item">
+                <i class="ni ni-settings-gear-65"></i>
+                <span>Settings</span>
+              </a>
+              <a href="../examples/profile.html" class="dropdown-item">
+                <i class="ni ni-calendar-grid-58"></i>
+                <span>Activity</span>
+              </a>
+              <a href="../examples/profile.html" class="dropdown-item">
+                <i class="ni ni-support-16"></i>
+                <span>Support</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#!" class="dropdown-item">
+                <i class="ni ni-user-run"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </li>
+        </ul>
       </div>
-
-      <div>
-        <label for="prenom">Prenom :</label>
-        <input class="prenom" type="text" [value]="UserData.prenom" disabled style="background-color: rgb(243, 241, 241);">
-      </div>
-    </div>
-
-    <div class="number2">
-      <div>
-        <label for="email">Adresse email :</label>
-        <input class="email" type="text" [value]="UserData.email" formControlName="email">
-        <div *ngIf="UpdateProfile.controls['email'].invalid && UpdateProfile.controls['email'].touched">
-          <span class="text-danger">Adresse email n'est pas dans le bon format </span>
+    </nav> -->
+    <!-- Header -->
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(https://raw.githubusercontent.com/creativetimofficial/argon-dashboard/gh-pages/assets-old/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="display-2 text-white">Hello {{UserData.nom}}</h1>
+            <p class="text-white mt-0 mb-5">Ceci est votre page de profil. Vous pouvez voir l'avancement de votre travail et gérer vos projets ou tâches assignées</p>
+            <div class="w-20"></div>
+          </div>
         </div>
       </div>
-      <div>
-        <label for="adresse">Adresse :</label>
-        <input class="adresse" type="text" [value]="UserData.adresse" formControlName="adresse">
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--7">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+          <div class="card card-profile shadow">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <a href="#">
+                    <img src="../../../../assets/IMG/profile 1.jpg" class="rounded-circle">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+              <div class="d-flex justify-content-between">
+                <div class="btn btn-sm btn-info mr-4"></div>
+                <div class="btn btn-sm btn-default float-right">  </div>
+              </div>
+            </div>
+            <div class="card-body pt-0 pt-md-4">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                    <div>
+                      <span class="heading">22</span>
+                      <span class="description">Friends</span>
+                    </div>
+                    <div>
+                      <span class="heading">10</span>
+                      <span class="description">Photos</span>
+                    </div>
+                    <div>
+                      <span class="heading">89</span>
+                      <span class="description">Comments</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center"> 
+                <h3>
+                  {{UserData.nom}} {{UserData.prenom}}<span class="font-weight-light">, {{UserData.sexe ? "Homme": "femme"}}</span>
+                </h3>
+                <div class="h5 font-weight-300">
+                  <i class="ni location_pin mr-2"></i>
+                  {{UserData.ville}}, {{UserData.adresse}}
+                </div>
+                <div class="h5 mt-4">
+                  <i class="ni business_briefcase-24 mr-2"></i>{{UserData.email}}
+                </div>
+                <div>
+                  <i class="ni education_hat mr-2"></i>{{UserData.telephone}}
+                </div>
+                <hr class="my-4">
+                <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Mon compte</h3>
+                </div>
+                <div class="col-4 text-right">
+                  <div  class="btn btn-sm btn-primary"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form  [formGroup]="UpdateProfile" (ngSubmit)="confirmerModification()">
+                <h6 class="heading-small text-muted mb-4">User information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">Nom :</label>
+                        <input type="text" id="input-username"  [value]="UserData.nom" disabled class="form-control form-control-alternative" placeholder="Nom :" value="lucky.jesse">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">Prenom :</label>
+                        <input type="text" id="input-username" [value]="UserData.prenom" disabled class="form-control form-control-alternative" placeholder="Prenom :" value="lucky.jesse">
+                      </div>
+                    </div>
+                   
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Email address</label>
+                        <input type="email" id="input-email" [value]="UserData.email" formControlName="email" class="form-control form-control-alternative" placeholder="jesse@example.com">
+                        <div *ngIf="UpdateProfile.controls['email'].invalid && UpdateProfile.controls['email'].touched">
+                          <span class="text-danger">Adresse email n'est pas dans le bon format </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <!-- Address -->
+                <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Address :</label>
+                        <input id="input-address" class="form-control form-control-alternative" [value]="UserData.adresse" formControlName="adresse" placeholder="Home Address" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">Ville :</label>
+                        <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" [value]="UserData.ville" formControlName="ville" >
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-country">Sexe :</label>
+                        <input type="text" id="input-country" [value]="UserData.sexe ? 'homme' : 'femme'" disabled class="form-control form-control-alternative" placeholder="ville">
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-country">Numéro de Téléphone :</label>
+                        <input type="number" id="input-postal-code" class="form-control form-control-alternative" [value]="'0' + UserData.telephone" formControlName="telephone" placeholder="Postal code">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <!-- Description -->
+                <h6 class="heading-small text-muted mb-4">About me</h6>
+                <div class="pl-lg-4">
+                  <div class="form-group focused">
+                    <label>About Me</label>
+                    <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                  </div>
+                </div>
+                <button class="btn btn-info">Enregistrer</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="number3">
-      <div>
-        <label for="ville">Ville :</label>
-        <input class="ville" type="text" [value]="UserData.ville" formControlName="ville">
-      </div>
-      <div>
-        <label for="sexe">Sexe :</label>
-        <input class="sexe" type="text" [value]="UserData.sexe ? 'homme' : 'femme'" disabled
-          style="background-color: rgb(243, 241, 241);">
-      </div>
-    </div>
-
-    <div class="number4">
-      <label for="phone">Numéro de Téléphone :</label>
-      <input class="phone" type="number" [value]="'0' + UserData.telephone" formControlName="telephone">
-    </div>
-
-    <button class="Changer">Enregistrer</button>
-  </form>
+  </div>
+ 
 </div>
+
+<!-- <div class="profil">
+
+  <div class="EmplacementArticel">
+    <h2 class="title">
+      <i class="fa-solid fa-user fa-xl"></i> 
+      Profile :
+    </h2>
+    <form class="Forms" [formGroup]="UpdateProfile" (ngSubmit)="confirmerModification()">
+      <div class="number1">
+        <div>
+          <label for="nom">Nom :</label>
+          <input class="nom" type="text" [value]="UserData.nom" disabled style="background-color: rgb(243, 241, 241);">
+        </div>
+  
+        <div>
+          <label for="prenom">Prenom :</label>
+          <input class="prenom" type="text" [value]="UserData.prenom" disabled style="background-color: rgb(243, 241, 241);">
+        </div>
+      </div>
+  
+      <div class="number2">
+        <div>
+          <label for="email">Adresse email :</label>
+          <input class="email" type="text" [value]="UserData.email" formControlName="email">
+          <div *ngIf="UpdateProfile.controls['email'].invalid && UpdateProfile.controls['email'].touched">
+            <span class="text-danger">Adresse email n'est pas dans le bon format </span>
+          </div>
+        </div>
+        <div>
+          <label for="adresse">Adresse :</label>
+          <input class="adresse" type="text" [value]="UserData.adresse" formControlName="adresse">
+        </div>
+      </div>
+  
+      <div class="number3">
+        <div>
+          <label for="ville">Ville :</label>
+          <input class="ville" type="text" [value]="UserData.ville" formControlName="ville">
+        </div>
+        <div>
+          <label for="sexe">Sexe :</label>
+          <input class="sexe" type="text" [value]="UserData.sexe ? 'homme' : 'femme'" disabled
+            style="background-color: rgb(243, 241, 241);">
+        </div>
+      </div>
+  
+      <div class="number4">
+        <label for="phone">Numéro de Téléphone :</label>
+        <input class="phone" type="number" [value]="'0' + UserData.telephone" formControlName="telephone">
+      </div>
+  
+      <button class="Changer">Enregistrer</button>
+    </form>
+  </div>
+
+
+</div> -->

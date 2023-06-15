@@ -1,12 +1,12 @@
 button{
-  color: white;
+  color: rgb(0, 0, 0);
   position: absolute;
   left: 15%;
   top: 85%;
   font-size: 20px;
   border-radius: 100px;
   border-style: none;
-  background-color: rgb(255, 0, 0);
+  background-color:aqua;
   width: 70%;
 
 }
