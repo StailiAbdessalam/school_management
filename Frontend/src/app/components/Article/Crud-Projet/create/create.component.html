@@ -1,7 +1,7 @@
 <app-sidebar></app-sidebar>
-<div class="EmplacementArticel">
 
 
+ <div class="container__form">
   <div class="nom">
     <label for="NomPRojet"> Nom du projet :</label>
     <input type="text" id="nom" value="" placeholder="Choisir un nom pour votre Projet ! :)" [(ngModel)]="nomProjet">
@@ -31,7 +31,7 @@
 </div>
 
   <div class="description">
-    <label for="description">Description du projet</label>
+    <label for="description" class="description__label">Description du projet</label>
     <textarea name="description" id="description" rows="4" placeholder="Description du projet" [(ngModel)]="descriptionProjet"></textarea>
   </div>
 

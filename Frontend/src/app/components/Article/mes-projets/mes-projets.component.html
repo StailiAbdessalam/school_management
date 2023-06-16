@@ -1,11 +1,12 @@
 <app-sidebar></app-sidebar>
 <main>
-<div class="Emplacement__articl" style="border: 1px solid black;">
-
+<div class="container"  >
   <!-- **********************************************************Etudiant******************************************************  -->
   <div class="row"  *ngIf="TokenDecode?.role === 'Etudiant'">
     <div class="card" *ngFor="let projetInscrit of UserPro.projetInscrit">
+      <div class="image__container">
       <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
+    </div>
       <div class="card-body">
         <h5 class="card-title"> <strong>{{ projetInscrit.projet.nom }}</strong></h5>
         <a routerLink="/ProjetDetails/{{ projetInscrit.projet._id }}"><button class="btn">Plus d'informations</button></a>
@@ -21,7 +22,9 @@
     </div>
 
     <div class="card" *ngFor="let item of UserPro">
+      <div class="image__container">
       <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
+      </div>
       <div class="card-body">
         <h5 class="card-title"> <strong>{{ item.nom }}</strong></h5>
 
@@ -108,7 +111,7 @@
         </div>
       </div>
 
-      <button>Créer le compte</button>
+      <button class="account__creation">Créer le compte</button>
     </form>
 
    </div>
