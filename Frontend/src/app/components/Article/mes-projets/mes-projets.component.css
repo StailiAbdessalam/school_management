@@ -13,7 +13,15 @@
 }
 main{
   position: relative;
-  border: 1px solid black;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid red;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  min-height: 100vh;
 }
 .card{
 	width: calc(100%/3);
