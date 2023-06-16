@@ -1,7 +1,6 @@
 <app-sidebar></app-sidebar>
 <main>
 <div class="Emplacement__articl" style="border: 1px solid black;">
-
   <!-- **********************************************************Etudiant******************************************************  -->
   <div class="row"  *ngIf="TokenDecode?.role === 'Etudiant'">
     <div class="card" *ngFor="let projetInscrit of UserPro.projetInscrit">

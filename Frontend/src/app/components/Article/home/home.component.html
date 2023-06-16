@@ -1,7 +1,7 @@
 <app-sidebar></app-sidebar>
 <!-------------------------------------------------Etudiant----------------------------------------------------->
-<div class="container__main" style="border: 1px solid black;">
-<div class="EmplacementArticel row" *ngIf="TokenDecode?.role === 'Etudiant'">
+<div class="container__main">
+<div class="EmplacementArticel" *ngIf="TokenDecode?.role === 'Etudiant'">
   <div class="card" *ngFor="let item of bodyData">
     <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
     <div class="card-body">
@@ -17,14 +17,14 @@
 </div>
 
 <!-------------------------------------------------Enseignant----------------------------------------------------->
-<div class="EmplacementArticel row"   *ngIf="TokenDecode?.role === 'Enseignant'">
+<div class="EmplacementArticel" *ngIf="TokenDecode?.role === 'Enseignant'">
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill"  class="recherche">
     <mat-label>Filter Table</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
   </mat-form-field>
 
-  <div class="mat-elevation-z8">
+  <div class="mat-elevation-z8 table-dev">
     <table mat-table [dataSource]="dataSource" matSort>
 
       <!-- ID Column -->
@@ -83,20 +83,23 @@
 </div>
 
 <!-------------------------------------------------Administrateur-------------------------------------------------->
-<div class="EmplacementArticel row" *ngIf="TokenDecode?.role === 'Administrateur'">
+<div class="EmplacementArticel" *ngIf="TokenDecode?.role === 'Administrateur'">
 
   <div class="choix">
     <h5 style="color: black;">Vous cherchez ? :</h5>
-    <button [class.active]="etudiantSelected" (click)="selectEtudiant()">Etudiant</button>
-    <button [class.active]="enseignantSelected" (click)="selectEnseignant()">Enseignant</button>
+    <div class="switcher">
+      <button [class.active]="etudiantSelected" (click)="selectEtudiant()">Etudiant</button>
+      <button [class.active]="enseignantSelected" (click)="selectEnseignant()">Enseignant</button>
+    </div>  
   </div>
+  
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" class="recherche">
     <mat-label>Filter Table</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
   </mat-form-field>
 
-  <div class="mat-elevation-z8">
+  <div class="table-dev mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
 
       <!-- ID Column -->

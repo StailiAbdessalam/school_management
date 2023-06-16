@@ -33,3 +33,6 @@ main{
 .card-img-top{
   background-size:cover;
 }
+main .row{
+  margin-top: 10%;
+}
