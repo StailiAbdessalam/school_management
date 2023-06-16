@@ -20,6 +20,7 @@ body {
   color: var(--body);
   font-family: 'Karla', sans-serif;
   font-size: 1.6rem;
+  overflow-y: scroll;
 
 }
 

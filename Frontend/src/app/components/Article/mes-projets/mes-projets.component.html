@@ -1,8 +1,9 @@
 <app-sidebar></app-sidebar>
-<div class="EmplacementArticel">
+<main>
+<div class="Emplacement__articl" style="border: 1px solid black;">
 
   <!-- **********************************************************Etudiant******************************************************  -->
-  <div class="row" *ngIf="TokenDecode?.role === 'Etudiant'">
+  <div class="row"  *ngIf="TokenDecode?.role === 'Etudiant'">
     <div class="card" *ngFor="let projetInscrit of UserPro.projetInscrit">
       <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
       <div class="card-body">
@@ -112,3 +113,4 @@
 
    </div>
 </div>
+</main>
