@@ -1,5 +1,6 @@
 <app-sidebar></app-sidebar>
 <!-------------------------------------------------Etudiant----------------------------------------------------->
+<div class="container__main" style="border: 1px solid black;">
 <div class="EmplacementArticel row" *ngIf="TokenDecode?.role === 'Etudiant'">
   <div class="card" *ngFor="let item of bodyData">
     <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
@@ -16,7 +17,7 @@
 </div>
 
 <!-------------------------------------------------Enseignant----------------------------------------------------->
-<div class="EmplacementArticel row" *ngIf="TokenDecode?.role === 'Enseignant'">
+<div class="EmplacementArticel row"   *ngIf="TokenDecode?.role === 'Enseignant'">
 
   <mat-form-field appearance="fill">
     <mat-label>Filter Table</mat-label>
@@ -78,6 +79,7 @@
 
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
   </div>
+</div>
 </div>
 
 <!-------------------------------------------------Administrateur-------------------------------------------------->
