@@ -162,4 +162,8 @@ label {
   width: 90%;
  
 }
+.prerequisTab,
+.competenceTab{
+  margin-left: 0;
+}
 }
