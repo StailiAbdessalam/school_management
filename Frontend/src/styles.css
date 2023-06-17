@@ -18,7 +18,7 @@ body {
     margin-left: 16.5rem;
 } */
 
-.EmplacementArticel {
+/* .EmplacementArticel {
   position: relative;
   margin-left: 15%;
 }
@@ -39,6 +39,6 @@ body {
   top: 12rem;
   color: black;
   font-size: 2rem;
-}
+} */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

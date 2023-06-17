@@ -1,18 +1,34 @@
-.competence{
+main{
+  position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+.container{
+  width: 80%;
+  height: 600px;
+  margin: auto;
+  position:absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+}
+.competence {
   position: relative;
   top: 11rem;
-
 }
-.nom{
-  padding-left: 5%;
-  top: 30%;
-  position: relative;
-  font-size: 20px;
-
+.titreProjet{
+  color:black;
+  position: absolute;
+  top: 7%;
+  left: 299px;
 }
-.ligne{
+
+.ligne {
   border-bottom: solid 1px gray;
   width: 95%;
   border-radius: 20px;
@@ -20,111 +36,109 @@
   margin-bottom: 10px;
   background-color: white;
 }
-.ligne li{
+
+.ligne li {
   display: inline;
   font-size: 25px;
   color: black;
 }
-.competence ul{
+
+.competence ul {
   width: 70%;
   height: 100%;
-  left: 13%;
+  margin: 0 auto;
   position: relative;
   border-radius: 15px;
   padding: 3%;
   list-style-type: none;
   background-color: rgba(159, 213, 231, 0.491);
 }
-.competence h4{
+
+.competence h4 {
   margin-bottom: 7%;
   color: black;
 }
 
-.niveau i{
-  left: 60%;
+.niveau i {
   position: absolute;
   display: inline;
   margin-top: 2%;
 }
-.icone{
+
+.icone {
   color: rgb(67, 241, 67);
   font-size: 30px;
 }
-.delete{
+
+.delete {
   color: red;
   margin-left: 8.5%;
   font-size: 30px;
 }
-.update
-{
+
+.update {
   color: blue;
   font-size: 30px;
   margin-left: 4%;
 }
-.inscrire
-{
+
+.inscrire {
   position: relative;
   margin-top: 10%;
   left: 30%;
   outline: none;
   border-style: none;
   color: white;
-  background-color:rgb(86, 50, 204);
+  background-color: rgb(86, 50, 204);
   padding: 10px;
   border-radius: 5px;
 }
-.inscrire i
-{
+
+.inscrire i {
   margin-right: 10px;
 }
-.desc
-{
+
+.desc {
   color: black;
-  left: 13%;
-  position:relative;
   width: 70%;
   background-color: #a0d6f2;
-  padding: 30px;
+  padding: 15px;
   border-radius: 15px;
   top: 3rem;
+  margin: 0 auto;
 }
 
-.prerequis
-{
+.prerequis {
   position: relative;
   background-color: rgb(255, 222, 225);
   top: 5rem;
   width: 70%;
-  left: 13%;
-  padding: 30px;
+  padding: 10px;
   border-radius: 15px;
   color: black;
+  margin: 30px auto;
+
 }
 
-.favoris{
+.favoris {
   position: absolute;
   font-size: 35px;
   left: 80%;
   top: 21.5%;
-
-}
-
-.favoris{
-  position: absolute;
-  font-size: 35px;
-  left: 80%;
-  top: 20.5%;
   color: rgb(0, 13, 255);
-
 }
 
-.range{
+.range {
   position: relative;
   left: 30%;
   width: 60%;
   top: -8px;
 }
-/* range 2 */
+#opel{
+  top: 8%;
+  left: 96%;
+}
+/* Range 2 */
 #range2 {
   -webkit-appearance: none;
   appearance: none;
@@ -157,23 +171,27 @@
 }
 
 #range2::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+  box-shadow: 0 0 0 10px rgba(255, 85, 0, .1);
 }
+
 #range2:active::-webkit-slider-thumb {
-  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+  box-shadow: 0 0 0 13px rgba(255, 85, 0, .2);
 }
+
 #range2:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+  box-shadow: 0 0 0 13px rgba(255, 85, 0, .2);
 }
 
 #range2::-moz-range-thumb:hover {
-  box-shadow: 0 0 0 10px rgba(255,85,0, .1)
+  box-shadow: 0 0 0 10px rgba(255, 85, 0, .1);
 }
+
 #range2:active::-moz-range-thumb {
-  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+  box-shadow: 0 0 0 13px rgba(255, 85, 0, .2);
 }
+
 #range2:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+  box-shadow: 0 0 0 13px rgba(255, 85, 0, .2);
 }
 
 .value2 {
@@ -183,23 +201,20 @@
   color: black;
   left: 60%;
   top: -29px;
-
 }
 
-.totalStat{
-  left: 13%;
-  position:relative;
+.totalStat {
+  position: relative;
   width: 70%;
-  margin-top: 100px;
-  margin-bottom: 300px;
-
+  margin: 100px auto 300px auto;
 }
+
 .skill {
   width: 160px;
   height: 160px;
   position: relative;
-  left: 20%;
   display: flex;
+  margin: 0 auto;
 }
 
 .outer {
@@ -208,7 +223,7 @@
   border-radius: 50%;
   padding: 20px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-              -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 
 .inner {
@@ -216,11 +231,11 @@
   height: 120px;
   border-radius: 50%;
   display: flex;
-  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
-              inset -4px -4px 6px -1px rgba(255,255,255,0.7),
-              -0.5px -0.5px 0px rgba(255,255,255,1),
-              0.5px 0.5px 0px rgba(0,0,0,0.15),
-              0px 12px 10px -10px rgba(0,0,0,0.05);
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
   align-items: center;
   justify-content: center;
 }
@@ -253,14 +268,51 @@ svg {
   }
 }
 
+/* Media Query */
+@media (max-width: 768px) {
+  main{
+    top: 10%;
+  }
+  .container {
+    height: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    bottom: 10%;
+    left: 49%;
+  }
 
-/* *************************************stat 2 ********************************************** */
+  .competence,
+  .desc,
+  .prerequis {
+    width: 100%;
+    left: 0;
+    top: initial;
+  }
 
+  .competence ul,
+  .desc,
+  .prerequis {
+    width: 100%;
+    left: 0;
+    padding: 10px;
+  }
 
-.skill2 {
-  width: 160px;
-  height: 160px;
-  position: relative;
-  display: flex;
-  margin-left: 140%;
+  .totalStat {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 150px;
+  }
+
+  .skill {
+    margin-left: 0;
+  }
+  #opel{
+    top: 1%;
+    right: 35%;
+  }
+  .titreProjet{
+    top: 1%;
+    left: 2%;
+
+  }
 }
