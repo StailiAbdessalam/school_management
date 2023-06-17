@@ -8,12 +8,12 @@
   border-top-right-radius:4% ;
 
 }
+
 .EmplacementArticel {
   padding: 0 10px 0 10px ;
   position: relative;
   margin-left: 15%;
   margin-top: 130px;
-  
 }
 @media screen and (max-width: 900px){
   .EmplacementArticel {
@@ -79,6 +79,8 @@ table {
   display: flex;
   margin-bottom: 10px;
   width: 100%;
+
+
 }
 .choix h5{
   width: 20%;
