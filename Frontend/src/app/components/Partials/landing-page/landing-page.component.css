@@ -57,15 +57,17 @@ html{
 
 .main__container{
 	display: flex;
-	width: 70%;
-	
+	width: 60%;
+	margin: auto;	
 }
 .description__container{
-	width: 40%;
+	width: 50%;
+
+	padding-left: 10px ;
 
 }
 .img__logo{
-	width: 60rem;
+	width: 500px;
 	display: block;
 	transform: translateX(-140px);
 	-webkit-transform: translateX(-140px);
@@ -75,10 +77,10 @@ html{
 }
 
 .paragraph__description{
-	font-size: 1.7rem;
+	font-size: 1rem;
 	color:#816797;
+	padding: 30px 20px;
 	width: 80%;
-	margin-left: 5rem;
 	text-align: left;
 	transform: translateY(-190px);
 	-webkit-transform: translateY(-190px);
