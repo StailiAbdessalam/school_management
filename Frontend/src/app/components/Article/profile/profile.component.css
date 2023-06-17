@@ -220,7 +220,7 @@ h6,
 
 h1,
 .h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 h3,
@@ -230,7 +230,7 @@ h3,
 
 h4,
 .h4 {
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
 
 h5,
@@ -415,7 +415,7 @@ a>code {
 }
 
 .form-control {
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 1.5;
   display: block;
   width: 100%;
@@ -1595,7 +1595,7 @@ a.text-white:focus {
 }
 
 .form-control-label {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #525f7f;
 }
@@ -1636,6 +1636,7 @@ textarea[resize='horizontal'] {
   transition: box-shadow .15s ease;
   border: 0;
   box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+  font-size: 1rem;
 }
 
 .form-control-alternative:focus {
