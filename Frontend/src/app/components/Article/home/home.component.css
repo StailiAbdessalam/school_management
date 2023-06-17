@@ -8,6 +8,23 @@
   border-top-right-radius:4% ;
 
 }
+
+.EmplacementArticel {
+  padding: 0 10px 0 10px ;
+  position: relative;
+  margin-left: 15%;
+  margin-top: 130px;
+}
+@media screen and (max-width: 900px){
+  .EmplacementArticel {
+    margin-left: 90px;
+  }
+}
+@media screen and (max-width: 600px){
+  .EmplacementArticel {
+    margin-left: 0%;
+  }
+}
 .card-img-top
 {
   left: 0%;
@@ -34,9 +51,13 @@
   position: relative;
 }
 
-
+.table-dev{
+  /* width: 100%; */
+  overflow-x: scroll;
+}
 table {
   width: 100%;
+
 }
 
 .mat-form-field input {
@@ -56,21 +77,39 @@ table {
 
 .choix {
   display: flex;
-  left: 8%;
-  position: relative;
-  width: 92%;
+  margin-bottom: 10px;
+  width: 100%;
+
+
+}
+.choix h5{
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.switcher{
+  display: flex;
+  gap: 10px;
+  width: 80%;
+}
+@media all and (max-width: 950px) {
+  
+  .choix h5 ,
+  .switcher{
+    width: 100%;
+  }
+  .choix{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .choix button {
-  margin-left: 50px;
-  width: 190px;
-  border-radius: 15px;
+  width: 50%;
   outline: none;
   border: none;
   padding: 10px;
-  margin-bottom: 50px;
-  top: -12px;
-  position: relative;
 }
 
 button.active {
@@ -97,7 +136,9 @@ h2 {
     font-size: 0.5em;
   }
 }
-
+.recherche{
+  width: 100%;
+}
 .responsive-table {
   li {
     border-radius: 3px;
@@ -157,3 +198,11 @@ h2 {
     }
   }
 }
+
+
+
+
+
+
+
+

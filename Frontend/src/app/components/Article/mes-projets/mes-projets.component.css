@@ -56,12 +56,12 @@ height: 15em;
   color: white;
   background-color: #343d51;
   padding: .2em 2em;
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
+ 
+  /* -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-  margin-left: 2em;
+  -o-border-radius: 100px; */
+  /* margin-left: 2em; */
 }
 .btn{
    background-color: #01b7ff;
@@ -88,4 +88,7 @@ height: 15em;
     height: 300px;
     
   }
+}
+main .row{
+  margin-top: 100px;
 }
