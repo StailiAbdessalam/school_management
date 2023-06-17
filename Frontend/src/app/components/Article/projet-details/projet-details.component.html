@@ -1,13 +1,13 @@
 <app-sidebar></app-sidebar>
-
-<div class="titre">
+<main>
+<div class="titre" style="border: 1px solid black;">
   <h2 class="titreProjet"><i class="img_icon fa-solid fa-gear"></i> {{ DetailsProjet.nom }} </h2>
-  <i *ngIf="TokenDecode?.role === 'Etudiant'" class="fa-solid fa-heart favoris" (click)="favoris(DetailsProjet._id)"></i>
+  <i *ngIf="TokenDecode?.role === 'Etudiant'" class="fa-solid fa-heart favoris"  (click)="favoris(DetailsProjet._id)"></i>
 
-  <a routerLink="/Projet/modifier/{{DetailsProjet._id}}"><i *ngIf="TokenDecode?.role === 'Enseignant'" class="fa-sharp fa-solid fa-pen-to-square favoris"></i></a>
+  <a routerLink="/Projet/modifier/{{DetailsProjet._id}}"><i *ngIf="TokenDecode?.role === 'Enseignant'"id="opel" class="fa-sharp fa-solid fa-pen-to-square favoris" ></i></a>
 </div>
 
-<div class="EmplacementArticel">
+<div class="container">
   <p class="desc">
     <i class="fa-solid fa-circle-info fa-xl" style="margin-right: 10px;"></i>
     <strong>Description</strong><br> {{ DetailsProjet.description }}
@@ -54,7 +54,7 @@
 
 
 <!-- **************************************Stat 1**************************************** -->
-    <div class="skill">
+    <!-- <div class="skill">
       <div class="outer">
         <div class="inner">
           <div id="number">
@@ -77,7 +77,7 @@
 <!-- **************************************Stat 2**************************************** -->
 
 
-<div class="skill2">
+<!-- <div class="skill2">
   <div class="outer">
     <div class="inner">
       <div id="number">
@@ -94,11 +94,12 @@
     </defs>
     <circle cx="80" cy="80" r="70" stroke-linecap="round" />
 
-</svg>
+</svg> --> -->
 
     </div>
   </div>
 </div>
 
-</div>
-</div>
+<!-- </div>
+</div> -->
+</main>
