@@ -1,3 +1,9 @@
+.EmplacementArticel{
+  position: relative;
+  margin-top: 170px;
+  margin-left: 15%;
+}
+
 form{
   top: 100px;
   position: relative;

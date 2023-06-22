@@ -2,65 +2,7 @@
 
 <div>
   <div class="main-content">
-    <!-- Top navbar -->
-    <!-- <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
-      <div class="container-fluid">
-      
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="https://www.creative-tim.com/product/argon-dashboard" target="_blank">User profile</a>
-       
-        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
-          <div class="form-group mb-0">
-            <div class="input-group input-group-alternative">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-              </div>
-              <input class="form-control" placeholder="Search" type="text">
-            </div>
-          </div>
-        </form>
-       
-        <ul class="navbar-nav align-items-center d-none d-md-flex">
-          <li class="nav-item dropdown">
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg">
-                </span>
-                <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Jessica Jones</span>
-                </div>
-              </div>
-            </a>
-            <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-              <div class=" dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Welcome!</h6>
-              </div>
-              <a href="../examples/profile.html" class="dropdown-item">
-                <i class="ni ni-single-02"></i>
-                <span>My profile</span>
-              </a>
-              <a href="../examples/profile.html" class="dropdown-item">
-                <i class="ni ni-settings-gear-65"></i>
-                <span>Settings</span>
-              </a>
-              <a href="../examples/profile.html" class="dropdown-item">
-                <i class="ni ni-calendar-grid-58"></i>
-                <span>Activity</span>
-              </a>
-              <a href="../examples/profile.html" class="dropdown-item">
-                <i class="ni ni-support-16"></i>
-                <span>Support</span>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#!" class="dropdown-item">
-                <i class="ni ni-user-run"></i>
-                <span>Logout</span>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav> -->
+
     <!-- Header -->
     <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
       style="min-height: 600px; background-image: url(https://raw.githubusercontent.com/creativetimofficial/argon-dashboard/gh-pages/assets-old/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
@@ -230,7 +172,7 @@
                   <div class="form-group focused">
                     <label>About Me</label>
                     <textarea rows="4" class="form-control form-control-alternative"
-                      placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                      placeholder="A few words about you ...">Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</textarea>
                   </div>
                 </div>
                 <button class="btn btn-info">Enregistrer</button>
@@ -243,61 +185,3 @@
   </div>
 
 </div>
-
-<!-- <div class="profil">
-
-  <div class="EmplacementArticel">
-    <h2 class="title">
-      <i class="fa-solid fa-user fa-xl"></i> 
-      Profile :
-    </h2>
-    <form class="Forms" [formGroup]="UpdateProfile" (ngSubmit)="confirmerModification()">
-      <div class="number1">
-        <div>
-          <label for="nom">Nom :</label>
-          <input class="nom" type="text" [value]="UserData.nom" disabled style="background-color: rgb(243, 241, 241);">
-        </div>
-  
-        <div>
-          <label for="prenom">Prenom :</label>
-          <input class="prenom" type="text" [value]="UserData.prenom" disabled style="background-color: rgb(243, 241, 241);">
-        </div>
-      </div>
-  
-      <div class="number2">
-        <div>
-          <label for="email">Adresse email :</label>
-          <input class="email" type="text" [value]="UserData.email" formControlName="email">
-          <div *ngIf="UpdateProfile.controls['email'].invalid && UpdateProfile.controls['email'].touched">
-            <span class="text-danger">Adresse email n'est pas dans le bon format </span>
-          </div>
-        </div>
-        <div>
-          <label for="adresse">Adresse :</label>
-          <input class="adresse" type="text" [value]="UserData.adresse" formControlName="adresse">
-        </div>
-      </div>
-  
-      <div class="number3">
-        <div>
-          <label for="ville">Ville :</label>
-          <input class="ville" type="text" [value]="UserData.ville" formControlName="ville">
-        </div>
-        <div>
-          <label for="sexe">Sexe :</label>
-          <input class="sexe" type="text" [value]="UserData.sexe ? 'homme' : 'femme'" disabled
-            style="background-color: rgb(243, 241, 241);">
-        </div>
-      </div>
-  
-      <div class="number4">
-        <label for="phone">Numéro de Téléphone :</label>
-        <input class="phone" type="number" [value]="'0' + UserData.telephone" formControlName="telephone">
-      </div>
-  
-      <button class="Changer">Enregistrer</button>
-    </form>
-  </div>
-
-
-</div> -->

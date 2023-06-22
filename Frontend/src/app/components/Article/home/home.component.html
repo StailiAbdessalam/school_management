@@ -2,17 +2,33 @@
 <!-------------------------------------------------Etudiant----------------------------------------------------->
 <div class="container__main">
   <div class="EmplacementArticel" *ngIf="TokenDecode?.role === 'Etudiant'">
-    <div class="card" *ngFor="let item of bodyData">
-      <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><strong>{{ item.nom }}</strong></h5>
-        <a routerLink="/ProjetDetails/{{ item._id }}"><button class="btn">Plus d'informations</button></a>
+    <div class="accueil_etudient">
+      <div class="card" *ngFor="let item of bodyData">
+        <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{ item.nom }}</strong></h5>
+          <a routerLink="/ProjetDetails/{{ item._id }}"><button class="btn">Plus d'informations</button></a>
+        </div>
       </div>
+      <div class="card" *ngFor="let item of bodyData">
+        <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{ item.nom }}</strong></h5>
+          <a routerLink="/ProjetDetails/{{ item._id }}"><button class="btn">Plus d'informations</button></a>
+        </div>
+      </div>
+      <div class="card" *ngFor="let item of bodyData">
+        <img class="card-img-top" src="../../../../assets/IMG/fondBleu.avif" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><strong>{{ item.nom }}</strong></h5>
+          <a routerLink="/ProjetDetails/{{ item._id }}"><button class="btn">Plus d'informations</button></a>
+        </div>
+      </div>
+      
     </div>
     <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
     </mat-paginator>
   </div>
-
   <!-------------------------------------------------Enseignant----------------------------------------------------->
   <div class="EmplacementArticel" *ngIf="TokenDecode?.role === 'Enseignant'">
 

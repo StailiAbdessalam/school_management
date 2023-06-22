@@ -2,44 +2,59 @@
 
 <div class="EmplacementArticel">
   <form [formGroup]="UpdateProfileUser" (ngSubmit)="UpdateUser()">
-    <div>
-      <label>Nom :</label>
-      <input type="text"  formControlName="nom" >
+    <div class="group-label-input">
+      <div class="form__group field">
+        <input type="text" class="form__field" name="nom" id='nom'  placeholder="Veuillez taper le nom" formControlName="nom"  />
+        <label for="name" class="form__label">Nom :</label>
+      </div>
     </div>
 
-    <div>
-      <label>Prénom :</label>
-      <input type="text" formControlName="prenom">
+    <div class="group-label-input">
+      <div class="form__group field">
+        <input type="text" class="form__field" name="prenom" id='prenom'  placeholder="Veuillez taper le prenom" formControlName="prenom"  />
+        <label for="prenom" class="form__label">Indiquez le prénom de l'utilisateur</label>
+      </div>
+      
     </div>
 
-    <div>
-      <label for="email">Adresse email :</label>
-      <input class="email" type="text" formControlName="email">
+    <div class="group-label-input">
+      <div class="form__group field">
+        <input type="text" class="form__field" name="email" id='email'  placeholder="Veuillez taper le email" formControlName="email"  />
+        <label for="email" class="form__label">Indiquez l'email de l'utilisateur</label>
+      </div>
       <div *ngIf="UpdateProfileUser.controls['email'].invalid && UpdateProfileUser.controls['email'].touched">
         <span class="text-danger">Adresse email n'est pas dans le bon format </span>
       </div>
     </div>
 
-    <div>
-      <label>Numéro de téléphone :</label>
-      <input type="number" formControlName="telephone">
+    <div class="group-label-input">
+      <div class="form__group field">
+        <input type="text" class="form__field" name="telephone" id='telephone'  placeholder="Veuillez taper le numéro de téléphone" formControlName="telephone"  />
+        <label for="telephone" class="form__label">Indiquez le numéro de téléphone de l'utilisateur</label>
+      </div>
+    </div>
+
+    <div class="group-label-input">
+      <div class="form__group field">
+        <input type="text" class="form__field" name="nom" id='adresse'  placeholder="Veuillez taper le adresse" formControlName="adresse"  />
+        <label for="adresse" class="form__label">Indiquez le adresse de l'utilisateur</label>
+      </div>
+    </div>
+
+    <div class="group-label-input">
+      <div class="form__group field">
+        <input type="text" class="form__field" name="ville" id='ville'  placeholder="Veuillez taper le ville" formControlName="ville"  />
+        <label for="ville" class="form__label">Indiquez le ville de l'utilisateur</label>
+      </div>
     </div>
 
     <div>
-      <label>Adresse :</label>
-      <input type="text" formControlName="adresse">
+      <div class="form__group field">
+        <input type="date" class="form__field" name="dateDeNaissance" id='dateDeNaissance'  placeholder="Veuillez taper  la date de naissance" formControlName="dateDeNaissance"  />
+        <label for="dateDeNaissance" class="form__label">Indiquez la date de naissance de l'utilisateur</label>
+      </div>
     </div>
-
-    <div>
-      <label>Ville :</label>
-      <input type="text" formControlName="ville">
-    </div>
-
-    <div>
-      <label>Date de naissance :</label>
-      <input type="date" formControlName="dateDeNaissance">
-    </div>
-    <button class="button">Enregistrer</button>
+    <button class="account__creation submit">Enregistrer</button>
   </form>
 
   <div>

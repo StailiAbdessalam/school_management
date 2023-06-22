@@ -35,72 +35,88 @@
 
   </div>
 
-  <div class="row" *ngIf="TokenDecode?.role === 'Administrateur'">
+  <div class="create-user-role" *ngIf="TokenDecode?.role === 'Administrateur'">
     <form class="Inscription" [formGroup]="CreerProfile" (ngSubmit)="Creation()">
       <div class="choix">
         <label>Indiquez le rôle de l'utilisateur</label>
+      <div class="group-button-role">
         <button [class.active]="etudiantSelected" (click)="selectEtudiant()">Etudiant</button>
         <button [class.active]="enseignantSelected" (click)="selectEnseignant()">Enseignant</button>
+      </div> 
       </div>
 
-      <div>
-        <label for="nom">Indiquez le nom de l'utilisateur</label>
-        <input type="text" name="nom" id="nom" placeholder="Veuillez taper le nom" formControlName="nom">
+      <div class="choix">
+        <div class="form__group field">
+          <input type="text" class="form__field" name="nom" id='nom'  placeholder="Veuillez taper le nom" formControlName="nom"  />
+          <label for="name" class="form__label">Indiquez le nom de l'utilisateur</label>
+        </div>
         <div *ngIf="CreerProfile.controls['nom'].invalid && CreerProfile.controls['nom'].touched">
           <span class="text-danger">Le champs de nom est obligatoire !</span>
         </div>
       </div>
 
-      <div>
-        <label for="prenom">Indiquez le prénom de l'utilisateur</label>
-        <input type="text" name="prenom" id="prenom" placeholder="Veuillez taper le prénom" formControlName="prenom">
+      <div class="choix">
+        <div class="form__group field">
+          <input type="text" class="form__field" name="prenom" id='prenom'  placeholder="Veuillez taper le prenom" formControlName="prenom"  />
+          <label for="prenom" class="form__label">Indiquez le prénom de l'utilisateur</label>
+        </div>
         <div *ngIf="CreerProfile.controls['prenom'].invalid && CreerProfile.controls['prenom'].touched">
           <span class="text-danger">Le champs de prenom est obligatoire ! </span>
         </div>
       </div>
 
-      <div>
-        <label for="adresse">Indiquez l'adresse de l'utilisateur</label>
-        <input type="text" name="adresse" id="adresse" placeholder="Veuillez taper l'adresse" formControlName="adresse">
+      <div class="choix">
+        <div class="form__group field">
+          <input type="text" class="form__field" name="nom" id='adresse'  placeholder="Veuillez taper le adresse" formControlName="adresse"  />
+          <label for="adresse" class="form__label">Indiquez le adresse de l'utilisateur</label>
+        </div>
         <div *ngIf="CreerProfile.controls['adresse'].invalid && CreerProfile.controls['adresse'].touched">
           <span class="text-danger">Le champs de l'adresse est obligatoire ! </span>
         </div>
       </div>
 
-      <div>
-        <label for="email">Adresse email :</label>
-        <input class="email" type="text"  formControlName="email">
+      <div class="choix">
+        <div class="form__group field">
+          <input type="text" class="form__field" name="email" id='email'  placeholder="Veuillez taper le email" formControlName="email"  />
+          <label for="email" class="form__label">Indiquez l'email de l'utilisateur</label>
+        </div>
         <div *ngIf="CreerProfile.controls['email'].invalid && CreerProfile.controls['email'].touched">
           <span class="text-danger">Adresse email n'est pas dans le bon format </span>
 
         </div>
       </div>
 
-      <div>
-        <label for="dateDeNaissance">Indiquez la date de naissance de l'utilisateur</label>
-        <input type="date" name="dateDeNaissance" id="dateDeNaissance" placeholder="Veuillez taper la date de naissance" formControlName="dateDeNaissance">
+      <div class="choix">
+        <div class="form__group field">
+          <input type="date" class="form__field" name="dateDeNaissance" id='dateDeNaissance'  placeholder="Veuillez taper  la date de naissance" formControlName="dateDeNaissance"  />
+          <label for="dateDeNaissance" class="form__label">Indiquez la date de naissance de l'utilisateur</label>
+        </div>
         <div *ngIf="CreerProfile.controls['dateDeNaissance'].invalid && CreerProfile.controls['dateDeNaissance'].touched">
           <span class="text-danger">Le champs de la date de naissance est obligatoire !</span>
         </div>
       </div>
 
-      <div>
-        <label for="ville">Indiquez la ville de l'utilisateur</label>
-        <input type="text" name="ville" id="ville" placeholder="Veuillez taper la ville" formControlName="ville">
+      <div class="choix">
+        <div class="form__group field">
+          <input type="text" class="form__field" name="ville" id='ville'  placeholder="Veuillez taper le ville" formControlName="ville"  />
+          <label for="ville" class="form__label">Indiquez le ville de l'utilisateur</label>
+        </div>adre
         <div *ngIf="CreerProfile.controls['ville'].invalid && CreerProfile.controls['ville'].touched">
           <span class="text-danger">Le champs de ville est obligatoire !</span>
         </div>
       </div>
 
-      <div>
-        <label for="telephone">Indiquez le numéro de téléphone de l'utilisateur</label>
-        <input type="text" name="telephone" id="telephone" placeholder="Veuillez taper le numéro de téléphone" formControlName="telephone">
+      <div class="choix">
+        <div class="form__group field">
+          <input type="text" class="form__field" name="telephone" id='telephone'  placeholder="Veuillez taper le numéro de téléphone" formControlName="telephone"  />
+          <label for="telephone" class="form__label">Indiquez le numéro de téléphone de l'utilisateur</label>
+        </div>
         <div *ngIf="CreerProfile.controls['telephone'].invalid && CreerProfile.controls['telephone'].touched">
           <span class="text-danger">Le champs de telephone est obligatoire !</span>
         </div>
       </div>
 
-      <div>
+      <div class="choix">
         <label for="sexe">Indiquez le sexe de l'utilisateur</label>
         <select type="text" name="sexe" id="sexe" placeholder="Veuillez taper le sexe" formControlName="sexe">
           <option [value]="true">Homme</option>
@@ -111,7 +127,7 @@
         </div>
       </div>
 
-      <button class="account__creation">Créer le compte</button>
+      <button class="account__creation submit">Créer le compte</button>
     </form>
 
    </div>
